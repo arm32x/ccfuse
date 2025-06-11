@@ -23,6 +23,6 @@ public class ServerWritePacket extends ServerPathPacket {
 		super("write", path);
 		this.offset = offset;
 		data = new byte[(int) size];
-		buf.get(offset, data, 0, (int) size);
+		buf.get(0, data, 0, (int) size);
 	}
 }

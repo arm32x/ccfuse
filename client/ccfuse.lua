@@ -224,7 +224,7 @@ function operations.write(data, reply)
             f.close()
 
             -- todo: figure out what happens with offsets > old file length?
-            local newData = oldData:sub(1, data.offset) .. toWrite .. oldData:sub(data.offset + #toWrite + 1)
+            local newData = oldData:sub(1, data.offset + 1) .. toWrite .. oldData:sub(data.offset + #toWrite + 1)
 
             local sizeChange = #newData - #oldData
 
